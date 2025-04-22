@@ -75,6 +75,7 @@ export default function LoginSignUp() {
     return true; 
   }; 
  
+ 
   const registerHandler = async (event) => { 
     event.preventDefault(); 
     if (isLoading) return; 
