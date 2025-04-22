@@ -1,0 +1,116 @@
+.back-coaches {
+    background: url('/public/assets/images/Enorm-Gallery82401-35-1662577922-6318ed020339f.jpg') center / cover no-repeat fixed;
+    min-height: 100vh;
+    padding: 50px 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .coaches-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+  }
+  
+  .coaches-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .coach-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .coach-card.active {
+    border: 2px solid #f39c12;
+  }
+  
+  .coach-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+  
+  .coach-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .coach-info {
+    padding: 20px;
+  }
+  
+  .coach-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+  }
+  
+  .coach-info p {
+    font-size: 1rem;
+    color: #bdc3c7;
+  }
+  
+  .coach-details {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .coach-description {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .coach-description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+  }
+  
+  .coach-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  .coach-gallery {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .coach-details {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

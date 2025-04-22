@@ -1,0 +1,237 @@
+.navbar {
+  all: unset;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(132, 132, 132, 0.5), rgba(0, 0, 0, 0.9));
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.navbar:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(132, 132, 132, 0.8), rgba(0, 0, 0, 1));
+}
+
+.text-hover {
+    display: inline-block;
+    position: relative; /* برای استفاده از سایه */
+    color: black;
+    font-weight: 300; /* تغییر وزن فونت به باریک‌تر */
+    font-size: 16px; /* اندازه متن */
+    text-transform: uppercase; /* حروف بزرگ */
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; /* انیمیشن برای حرکت و سایز */
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.text-hover:hover {
+    transform: translateY(-5px) scale(1.1); /* حرکت به بالا و بزرگ شدن */
+    color: #ff6600; /* تغییر رنگ هنگام هاور */
+}
+
+.text-hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* فاصله از متن */
+    height: 2px; /* ضخامت خط زیرین */
+    background: #007bff; /* تغییر رنگ خط زیرین به آبی */
+    transform: scaleX(0); /* شروع از صفر */
+    transition: transform 0.3s ease; /* انیمیشن برای خط */
+}
+
+.text-hover:hover::after {
+    transform: scaleX(1); /* خط زیرین در حالت هاور */
+}
+
+
+
+
+
+  .navbar.sticky { 
+    background-color: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+  } 
+   
+  .brand-link { 
+    font-weight: bold; 
+    font-size: 1.3em; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+  } 
+   
+  .brand-link:hover .logo { 
+    transform: rotate(360deg); 
+  } 
+   
+  .nav-links { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+  } 
+  .animated {
+    animation: animatedColor 5s infinite !important;
+    font-weight: bold; /* متن را برجسته‌تر نمایش می‌دهد */
+    transition: all 3.3s ease; /* برای اضافه کردن تغییرات نرم‌تر */
+  }
+
+  @keyframes animatedColor{
+    0% {
+      color: white;
+    }
+    50% {
+      color: black;
+    }
+    100% {
+      color: white;
+    }
+  }
+   
+  .nav-link-item {
+    display: inline-block; /* لینک‌ها در یک خط کنار هم قرار می‌گیرند */
+    color: aqua; /* رنگ اصلی لینک‌ها */
+    text-decoration: none; /* حذف خط زیر لینک */
+    margin-left: 35px; /* فاصله بین لینک‌ها */
+    position: relative; /* برای افزودن افکت‌ها */
+    transition: all 0.3s ease; /* انیمیشن نرم‌تر */
+  }
+   
+  .nav-link-item:hover { 
+    background-color: rgba(32, 185, 204, 0.2); 
+    border-radius: 5px; 
+  } 
+   
+  .nav-link-item:hover .icon { 
+    transform: rotate(360deg); 
+    transition: .9s ease; 
+  } 
+   
+  
+.nav-link-item::after {
+  content: ''; /* خط زیر لینک */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* پیش‌فرض خط دیده نمی‌شود */
+  height: 2px; /* ضخامت خط */
+  background: transparent; /* مخفی کردن خط */
+  transition: all 0.3s ease; /* انیمیشن نرم‌تر */
+}
+   
+  .nav-link-item:hover::after { 
+    left: 0; 
+  } 
+   
+  .logo { 
+    width: 48px; 
+    height: 48px; 
+    border-radius: 100%; 
+    margin-right: 10px; 
+    color: aqua; 
+  } 
+   
+  .icon { 
+    margin-right: 0.1em; 
+    transition: transform 0.3s ease; 
+  } 
+   
+  .navbar .ms-auto { 
+    margin-left: auto; 
+  } 
+   
+  .navbar .ms-auto .nav-link-item { 
+    color: rgb(189, 206, 206);  
+    font-weight: bold; 
+    display: flex; 
+    justify-content: space-between; 
+    margin-left: 15px; /* فاصله کمتر در حالت دسکتاپ */
+  } 
+   
+   
+  .navbar .ms-auto .nav-link-item:hover::after { 
+    left: 100%; 
+  } 
+   
+  .navbar .ms-auto .nav-link-item .icon { 
+    margin-top: 2px; 
+    transition: none; 
+  } 
+   
+  .logout-btn{ 
+    position: relative; 
+    background: none; 
+    color:rgba(white, gray, black, alpha); 
+    border: none; 
+    font-weight: 500; 
+    margin-top: 2px; 
+  } 
+   
+  .logout-icon{ 
+    font-size: 20px; 
+    margin: 0 0 3px 10px; 
+    margin-left: 10px; 
+  } 
+   
+  .logout-btn:hover{ 
+    font-weight: bold; 
+    border-radius: 4px; 
+  }; 
+
+  .hamburger-btn {
+    display: none;
+}
+   
+  @media (max-width: 768px) { 
+    .nav-link-item { 
+        margin-left: 10px;  
+        font-size: 0.9rem;  
+    } 
+   
+    .navbar { 
+        padding: 0 1rem;  
+    } 
+     
+  }
+
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 20px;
+    }
+  
+    .hamburger-btn {
+      display: block; /* نمایش دکمه همبرگری در دستگاه‌های کوچک */
+    }
+  
+    .navbar-collapse {
+      display: none; /* پیش‌فرض مخفی برای نمایش دکمه */
+  }
+
+  .navbar-collapse.show {
+    display: flex
+;
+    align-items: flex-end;
+    background: inherit;
+    gap: 10px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+  
+    .nav-link-item {
+      font-size: 14px; /* کوچک‌تر شدن لینک‌ها برای دستگاه‌های کوچک */
+      margin-left: 0; /* حذف فاصله اضافی */
+    }
+  
+    .logout-btn {
+      margin-top: 10px;
+    }
+    .user-icon{
+      display: none;
+    }
+
+  }
+  
+  

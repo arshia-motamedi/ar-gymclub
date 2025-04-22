@@ -1,0 +1,33 @@
+.search-body{ 
+  padding-top: .8em; 
+  margin-left: 3em; 
+} 
+
+.wrapper-inputs{ 
+  background-color: #fff; 
+  width: 30%; 
+  border-radius: 20px; 
+  height: 2.5rem; 
+  padding: 0 15px; 
+  box-shadow: 0px 0px 0px #ddd; 
+  display: flex; 
+  align-items: center; 
+} 
+ 
+.search-input { 
+  background: transparent; 
+  height: 100%; 
+  font-size: 1.5rem; 
+  border: none; 
+  width: 100%; /* یا اندازه دلخواه */ 
+  margin-left: 20px; 
+} 
+
+.search-input:focus{ 
+  outline: none; 
+  cursor: pointer; 
+} 
+
+#search-icon{ 
+  color: royalblue; 
+}
